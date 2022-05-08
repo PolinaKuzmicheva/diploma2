@@ -202,6 +202,7 @@
   z-index: 0;
 }
 
+
 .header:after {
   content: "";
   background-color: #000000;
@@ -227,11 +228,18 @@
   margin: auto;
 }
 
+
+
 @media (min-width: 1200px) {
 
 .header-menu-button {
-  visibility: hidden;
+  display: none;
 }
+
+.header-logo-mobile {
+  display: none;
+}
+
 }
 
 .menu-items {
@@ -861,6 +869,8 @@
   font-family: "open sans", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+  width: 140px;
+  text-align: center;
 }
 
 
@@ -984,7 +994,7 @@
   }
 
   .menu-items {
-    visibility: hidden;
+    display: none;
   }
 
   .header-menu {
@@ -994,8 +1004,8 @@
   }
 
   .header-menu-button {
-    width: 55px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     text-decoration: none;
     border: none; 
     outline: none;
@@ -1031,6 +1041,10 @@
     display: block;
   }
 
+  .header-logo-mobile {
+    display: none;
+  }
+
 
   /*--trends--*/
 
@@ -1047,9 +1061,8 @@
   }
 
   .trends-preview {
-    display: flex;
     flex-wrap: wrap;
-    flex-grow: 1;
+    align-items: flex-end;
   }
   
   .trends .trend-item {
@@ -1152,4 +1165,200 @@
     font-size: 17px;
   }
 }
+
+
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+
+  .trends .trend-item {
+    width: 25%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .trends .trend-item:not(last-child) {
+    margin-right: 4px;
+    width: calc(25% - 4px);
+  }
+
+  .trend-item:nth-child(n+4) {
+    margin-top: 4px;
+  }
+
+}
+
+
+@media (max-width: 640px) {
+
+  .header-container {
+    text-align: center;
+  }
+
+  .header {
+    background-image: url(https://github.com/netology-code/mq-diploma/blob/master/sources/img/banner-mobile.jpg?raw=true);
+  }
+
+
+  .menu-items {
+    display: none;
+  }
+
+  .header-menu {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .header-menu-button {
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    border: none; 
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  
+  .header-menu-button::before, .header-menu-button::after {
+    content:"";
+    width: 23px;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    display: block;
+  }
+  
+  .header-menu-button::before {
+    margin-top: 12px;
+  }
+  
+  .header-menu-button::after {
+    margin-top: -6px;
+
+  }
+  
+  .menu-button-label {
+    width: 23px;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    margin: 3px 0;
+    display: block;
+  }
+
+  .header-logo {
+    display: none;
+  }
+
+  .logo-link {
+    text-align: center;
+  }
+
+  .header-logo-mobile {
+    padding-top: 180px;
+  }
+
+  .main-title {
+    font-size: 26px;
+    max-width: 330px;
+    padding: 40px 0 215px 0;
+  }
+
+  .trends-title {
+    font-size: 16px;
+  }
+
+  .tag-item-link {
+    font-size: 14px;
+  }
+
+  .trend-item-link, .news-name-link {
+    font-size: 16px;
+  }
+
+  .news-description {
+    font-size: 14px;
+  }
+
+  .product-title {
+    font-size: 17px;
+  }
+
+  .product-description {
+    font-size: 15px;
+  }
+
+  .store-link {
+    font-size: 14px;
+  }
+
+/*---------trends-------*/
+
+
+  .trends-preview {
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  .trends .trend-item {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 0px;
+  }
+
+  .trends .trend-item:not(first-child) {
+    margin-top: 3px;
+  }
+
+/*---------page-------*/
+
+  .page-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .news {
+    flex-wrap: wrap;
+    border-bottom: 3px solid #eeeeee;
+    padding-bottom: 20px;
+  }
+
+  .news-info {
+    max-width: 330px;
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+
+  .aside {
+    max-width: 330px;
+    margin-top: 44px;
+  }
+
+  .field {
+    width: 280px;
+  }
+
+  .mail-field, .subscription-button {
+    width: 330px;
+  }
+
+
+/*---------footer-------*/
+
+  .product-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .product-picture {
+    margin:auto;
+  }
+
+}
+
+
+
 
