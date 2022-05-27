@@ -1418,6 +1418,12 @@
     flex-direction: column;
   }
 
+  .aside-tags {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .themes {
     width: 100%;
   }
